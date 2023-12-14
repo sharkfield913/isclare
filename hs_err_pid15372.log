@@ -1,0 +1,190 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 2048 bytes for Failed to allocate _fine_grain_entries.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (t:/workspace/open/src/hotspot/share/gc/g1/heapRegionRemSet.cpp:270), pid=15372, tid=13892
+#
+# JRE version:  (11.0+28) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11+28, mixed mode, aot, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=utf8 c:\Users\oowgn\.vscode\extensions\vscjava.vscode-gradle-3.13.5\lib\gradle-language-server.jar
+
+Host: AMD Ryzen 5 5600H with Radeon Graphics         , 12 cores, 27G,  Windows 10 , 64 bit Build 19041 (10.0.19041.3636)
+Time: Thu Dec 14 23:51:58 2023 대한민국 표준시 elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001e674ca6000):  JavaThread "Unknown thread" [_thread_in_vm, id=13892, stack(0x0000004a6ac00000,0x0000004a6ad00000)]
+
+Stack: [0x0000004a6ac00000,0x0000004a6ad00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x63adaa]
+V  [jvm.dll+0x77852f]
+V  [jvm.dll+0x779b18]
+V  [jvm.dll+0x77a1d3]
+V  [jvm.dll+0x2624c8]
+V  [jvm.dll+0x367ef2]
+V  [jvm.dll+0x364c95]
+V  [jvm.dll+0x2f41c4]
+V  [jvm.dll+0x367346]
+V  [jvm.dll+0x366c90]
+V  [jvm.dll+0x2f2378]
+V  [jvm.dll+0x2f34d6]
+V  [jvm.dll+0x7517d7]
+V  [jvm.dll+0x752f1f]
+V  [jvm.dll+0x374099]
+V  [jvm.dll+0x738059]
+V  [jvm.dll+0x3e35fd]
+V  [jvm.dll+0x3e5961]
+C  [java.exe+0x3603]
+C  [java.exe+0x1746c]
+C  [KERNEL32.DLL+0x17344]
+C  [ntdll.dll+0x526b1]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001e67339f3b0, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001e67347a000 GCTaskThread "GC Thread#0" [stack: 0x0000004a6ad00000,0x0000004a6ae00000] [id=4372]
+  0x000001e674d58000 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000004a6ae00000,0x0000004a6af00000] [id=26552]
+  0x000001e674d5a800 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000004a6af00000,0x0000004a6b000000] [id=26904]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff8e78c0d37]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000001e674ca4610] Heap_lock - owner thread: 0x000001e674ca6000
+
+Heap address: 0x0000000642400000, size: 7132 MB, Compressed Oops mode: Non-zero based: 0x0000000642400000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff744080000 - 0x00007ff7440c5000 	C:\Users\oowgn\Documents\jdk-11\bin\java.exe
+0x00007ff9814f0000 - 0x00007ff9816e8000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff9808c0000 - 0x00007ff98097d000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff97f170000 - 0x00007ff97f466000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff97f550000 - 0x00007ff97f6ee000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff97f470000 - 0x00007ff97f492000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff980700000 - 0x00007ff98072c000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff97ed40000 - 0x00007ff97ee5a000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff97ee60000 - 0x00007ff97eefd000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff97ec40000 - 0x00007ff97ed40000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff96ab60000 - 0x00007ff96adfa000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.3636_none_60b6a03d71f818d5\COMCTL32.dll
+0x00007ff980980000 - 0x00007ff980a1e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff97f900000 - 0x00007ff97f930000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ff954f30000 - 0x00007ff954f46000 	C:\Users\oowgn\Documents\jdk-11\bin\vcruntime140.dll
+0x00007ff9463c0000 - 0x00007ff94646a000 	C:\Users\oowgn\Documents\jdk-11\bin\msvcp140.dll
+0x00007ff8e75c0000 - 0x00007ff8e8101000 	C:\Users\oowgn\Documents\jdk-11\bin\server\jvm.dll
+0x00007ff97fca0000 - 0x00007ff97fd4f000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff980a20000 - 0x00007ff980abc000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff97fd50000 - 0x00007ff97fe76000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff9813c0000 - 0x00007ff9813c8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ff967110000 - 0x00007ff967119000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff980730000 - 0x00007ff98079b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff974d80000 - 0x00007ff974da7000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff977dc0000 - 0x00007ff977dca000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff97d420000 - 0x00007ff97d432000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ff97a170000 - 0x00007ff97a181000 	C:\Users\oowgn\Documents\jdk-11\bin\verify.dll
+0x00007ff97c910000 - 0x00007ff97caf4000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ff969bc0000 - 0x00007ff969bf4000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ff97ef30000 - 0x00007ff97efb2000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ff96c9d0000 - 0x00007ff96c9f8000 	C:\Users\oowgn\Documents\jdk-11\bin\java.dll
+0x00007ff977530000 - 0x00007ff977546000 	C:\Users\oowgn\Documents\jdk-11\bin\zip.dll
+0x00007ff97a650000 - 0x00007ff97a65a000 	C:\Users\oowgn\Documents\jdk-11\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\oowgn\Documents\jdk-11\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.3636_none_60b6a03d71f818d5;C:\Users\oowgn\Documents\jdk-11\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=utf8 
+java_command: c:\Users\oowgn\.vscode\extensions\vscjava.vscode-gradle-3.13.5\lib\gradle-language-server.jar
+java_class_path (initial): c:\Users\oowgn\.vscode\extensions\vscjava.vscode-gradle-3.13.5\lib\gradle-language-server.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 10                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 467664896                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 7478444032                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5835340                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122911450                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122911450                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Users\oowgn\Documents\jdk-11
+PATH=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Users\oowgn\Documents\Oracle\app\oracle\product\11.2.0\server\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Bandizip\;C:\Program Files\dotnet\;C:\Users\oowgn\Documents\jdk-11\bin;C:\Program Files\WireGuard\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Git\cmd;C:\Users\oowgn\anaconda3\Scripts;C:\Program Files\Mullvad VPN\resources;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\oowgn\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\oowgn\AppData\Local\Programs\Python\Python310\;C:\Users\oowgn\AppData\Local\Microsoft\WindowsApps;C:\Users\oowgn\.dotnet\tools;C:\Users\oowgn\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\oowgn\AppData\Local\Android\Sdk\platform-tools;C:\Users\oowgn\AppData\Roaming\npm;C:\Users\oowgn\AppData\Local\afreeca
+USERNAME=oowgn
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.3636)
+
+CPU:total 12 (initial active 12) (12 cores per cpu, 2 threads per core) family 25 model 80 stepping 0, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, mmxext, 3dnowpref, lzcnt, sse4a, ht, tsc, tscinvbit, tscinv, bmi1, bmi2, adx, sha, fma
+
+Memory: 4k page, system-wide physical 28524M (11962M free)
+TotalPageFile size 30572M (AvailPageFile size 562M)
+current process WorkingSet (physical memory assigned to process): 27M, peak: 27M
+current process commit charge ("private bytes"): 530M, peak: 530M
+
+vm_info: OpenJDK 64-Bit Server VM (11+28) for windows-amd64 JRE (11+28), built on Aug 23 2018 03:04:58 by "mach5one" with MS VC++ 15.5 (VS2017)
+
+END.
