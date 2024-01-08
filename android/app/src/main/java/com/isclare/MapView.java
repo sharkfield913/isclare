@@ -87,7 +87,7 @@ public class MapView extends TMapView {
 
     public MapView(Context context) {
         super(context);
-        this.setSKTMapApiKey("jmr07bt8Myen5rgYDuyy7DAiXNwLIfJ8fFCL41q5");
+        this.setSKTMapApiKey("api 삽입");
         Log.d("construct", "called from constructor: " + this.centerLat);
         this.setZoom(12);
         this.setCenterPoint(this.centerLat, this.centerLong);
